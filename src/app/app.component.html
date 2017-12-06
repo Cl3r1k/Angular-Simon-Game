@@ -1,18 +1,30 @@
 <div class='wrapper'>
     <div class='board-container'>
-        <button class='btn left-up'>left-up</button>
-        <button class='btn right-up'>right-up</button>
-        <button class='btn right-down'>right-down</button>
-        <button class='btn left-down'>left-down</button>
+        <div class='tile left-up' [class.pressed]='state === 1' (mousedown)='userMouseDown(1)' (mouseup)='userMouseUp(1)' (mouseleave)='deactivate()'></div>
+        <div class='tile right-up' [class.pressed]='state === 2' (mousedown)='userMouseDown(2)' (mouseup)='userMouseUp(2)' (mouseleave)='deactivate()'></div>
+        <div class='tile left-down' [class.pressed]='state === 4' (mousedown)='userMouseDown(4)' (mouseup)='userMouseUp(4)' (mouseleave)='deactivate()'></div>
+        <div class='tile right-down' [class.pressed]='state === 3' (mousedown)='userMouseDown(3)' (mouseup)='userMouseUp(3)' (mouseleave)='deactivate()'></div>
         <div class='center-container'>
             <h1>Simon</h1>
-            <div class='display'>
+
+            <div class='display' [class.visible]='displayState === 1' [class.hidden]='displayState === 0'>
                 {{currentState}}
             </div>
-            <button class='start'>start</button>
-            <button class='strict'>strict</button>
-            <input type="checkbox" value='switcher'>
+
+            <svg class="icon icon-switch" (click)='changeGameState()' [class.pressed]='pwrState' (mousedown)='userMouseDownPwr(true)' (mouseup)='userMouseDownPwr(false)'>
+                <use xlink:href="#icon-switch"></use>
+            </svg>
+
+            <div class="slideMode">
+                <input type="checkbox" value="None" id="slideMode" name="check" [checked]='strictMode' (click)='toggleStrictMode()' />
+                <label for="slideMode"></label>
+            </div>
+
+            <div class="slideGameState">
+                <input type="checkbox" value="None" id="slideGameState" name="check" [checked]='isGame' (click)='toggleGameState()' />
+                <label for="slideGameState"></label>
+            </div>
+
         </div>
     </div>
-
 </div>

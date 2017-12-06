@@ -1,4 +1,198 @@
-$main-color: #c7c7c7;
-.header {
-    background-color: $main-color;
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
+$bgCenterColor: #fcfbe3;
+$mainColor: #333333;
+$bdRed: 1px solid red;
+$bdSide: 10px solid $mainColor;
+$bdRadius: 20px solid $mainColor;
+$bdRadiusInner: 8px solid $mainColor;
+.wrapper {
+    color: $mainColor;
+    font-family: Oswald;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    h1 {
+        font-family: 'Alfa Slab One', cursive;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .board-container {
+        color: $mainColor;
+        width: 350px;
+        height: 350px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-radius: 50%;
+        overflow: hidden;
+        border: $bdRadius;
+        .center-container {
+            background-color: $bgCenterColor;
+            border: $bdRadiusInner;
+            border-radius: 50%;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            position: absolute;
+            align-self: center;
+            padding: 3px;
+            .display {
+                font-family: 'Aldrich', sans-serif;
+                border: 3px solid $mainColor;
+                border-radius: 5px;
+                font-size: 26px;
+                display: inline-block;
+                margin: 3px 20px 3px 0px;
+                width: 45px;
+                background-color: #7aa139;
+                vertical-align: middle;
+                &.visible {
+                    color: #1bfd1b;
+                }
+                &.hidden {
+                    color: rgba(13, 39, 13, 0.439);
+                }
+            }
+            .icon-switch {
+                font-size: 32px;
+                margin-bottom: -11px;
+                color: #392f72;
+                &:hover {
+                    cursor: pointer;
+                }
+                &.pressed {
+                    color: #2c1af1;
+                    margin-bottom: -12px;
+                }
+            }
+        }
+    }
 }
+
+.tile {
+    width: 165px;
+    &.left-up {
+        background-color: #00a368;
+        border-bottom: $bdSide;
+        border-right: $bdSide;
+        margin-left: -3px;
+        &.pressed {
+            background-color: #00f59b;
+        }
+    }
+    &.right-up {
+        background-color: #c40223;
+        border-bottom: $bdSide;
+        border-left: $bdSide;
+        margin-right: -3px;
+        &.pressed {
+            background-color: #ff0130;
+        }
+    }
+    &.right-down {
+        background-color: #0086bf;
+        border-top: $bdSide;
+        border-left: $bdSide;
+        margin-right: -3px;
+        &.pressed {
+            background-color: #00b2f8;
+        }
+    }
+    &.left-down {
+        background-color: #c7a301;
+        border-top: $bdSide;
+        border-right: $bdSide;
+        margin-left: -3px;
+        &.pressed {
+            background-color: #ffd300;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+/* .slideMode */
+
+.slideMode {
+    width: 105px;
+    height: 20px;
+    background: #333;
+    margin: 7px auto;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+    &:after {
+        content: 'EASY';
+        color: white;
+        position: absolute;
+        right: 10px;
+        z-index: 0;
+        font: 10px/21px Arial, sans-serif;
+        font-weight: bold;
+        text-shadow: 1px 1px 0px rgba(255, 255, 255, .15);
+    }
+    &:before {
+        content: 'STRICT';
+        color: #27ae60;
+        position: absolute;
+        left: 10px;
+        z-index: 0;
+        font: 10px/21px Arial, sans-serif;
+        font-weight: bold;
+    }
+    label {
+        display: block;
+        width: 52px;
+        height: 14px;
+        cursor: pointer;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        z-index: 1;
+        background: #ddd;
+        border-radius: 50px;
+        transition: all 0.5s ease;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    }
+    input[type=checkbox] {
+        visibility: hidden;
+        &:checked+label {
+            left: 50px;
+            background: #26ca28;
+        }
+    }
+}
+
+
+/* end .slideMode */
+
+
+/* .slideGameState */
+
+.slideGameState {
+    @extend .slideMode;
+    width: 72px;
+    &:after {
+        content: 'OFF';
+        color: #000;
+    }
+    &:before {
+        content: 'ON';
+    }
+    label {
+        width: 34px;
+    }
+    input[type=checkbox] {
+        visibility: hidden;
+        &:checked+label {
+            left: 35px;
+        }
+    }
+}
+
+
+/* end .slideGameState */

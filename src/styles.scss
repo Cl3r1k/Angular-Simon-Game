@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import 'forkongithub';
 $bgBodyColor: #d3d3d3;
-$anchorColor: #7be6ff;
+$anchorColor: #17840b;
 html,
 body,
 p {
@@ -16,7 +17,7 @@ html {
 
 body {
     background-color: $bgBodyColor;
-    // background: linear-gradient(60deg, #0d503e, #F1F2B5);
+    background: radial-gradient(rgb(221, 221, 159), #3badda);
     color: #333;
     width: 100%;
 }
@@ -61,33 +62,16 @@ a:hover {
     }
 }
 
-
-/* Fork on Github styles */
-
-.github-corner:hover .octo-arm {
-    animation: octocat-wave 560ms ease-in-out
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
 }
 
-@keyframes octocat-wave {
-    0%,
-    100% {
-        transform: rotate(0)
-    }
-    20%,
-    60% {
-        transform: rotate(-25deg)
-    }
-    40%,
-    80% {
-        transform: rotate(10deg)
-    }
-}
-
-@media (max-width:500px) {
-    .github-corner:hover .octo-arm {
-        animation: none
-    }
-    .github-corner .octo-arm {
-        animation: octocat-wave 560ms ease-in-out
-    }
+.icon-dice {
+    font-size: 20px;
+    margin-bottom: -5px;
 }

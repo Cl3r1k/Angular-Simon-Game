@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     currentState: string;
     state: number;
     pwrState: boolean;
@@ -14,7 +14,6 @@ export class AppComponent {
     stepsArr: Array<number>;
     audiosArr: Array<string>;
     interval;
-    intervalSound;
     counter: number;
     mode: number;
     userSteps: number;
@@ -23,21 +22,27 @@ export class AppComponent {
     displayState: number;
     audio;
 
+
     constructor() {
         this.audio = new Audio();
         this.audiosArr = [`https://s3.amazonaws.com/freecodecamp/simonSound1.mp3`,
-        `https://s3.amazonaws.com/freecodecamp/simonSound2.mp3`,
-        `https://s3.amazonaws.com/freecodecamp/simonSound3.mp3`,
-        `https://s3.amazonaws.com/freecodecamp/simonSound4.mp3`];
+            `https://s3.amazonaws.com/freecodecamp/simonSound2.mp3`,
+            `https://s3.amazonaws.com/freecodecamp/simonSound3.mp3`,
+            `https://s3.amazonaws.com/freecodecamp/simonSound4.mp3`];
         this.initGame();
+    }
+
+    ngOnInit() {
+        const el = document.getElementById('nb-global-spinner');
+        if (el) {
+            el.style['display'] = 'none';
+        }
     }
 
     initGame() {
         this.currentState = '--';
         this.state = 0;
         this.stepsArr = [];
-        // this.stepsArr = [1, 2, 3, 4];
-        // this.stepsArr = [ 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4 ];
         this.counter = 0;
         this.mode = 0;    // TODO: Do not forget to change it back to 0
         this.userSteps = 0;
@@ -95,8 +100,8 @@ export class AppComponent {
         // If steps more than 20 -> win
         if (this.stepsArr.length >= 20) {
             alert('You won the game');
+            setTimeout(() => { this.changeGameState(); }, 3000);
             return;
-            // restart the game
         }
 
         this.interval = setInterval(() => {

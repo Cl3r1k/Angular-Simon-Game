@@ -16,7 +16,7 @@ Todos:
                 ✔ I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over. @done(17-12-04 16:13)
 
                 ✔ When user failed inform about this (like here https://codepen.io/imtoobose/pen/KMgvBX?q=simon&limit=all&type=type-pens) @done(17-12-06 17:01)
-                ☐ Some UI ideas from https://codepen.io/anthkris/pen/WGGAQz and here https://codepen.io/imtoobose/pen/KMgvBX?q=simon&order=popularity&depth=everything&show_forks=false
+                ✔ Some UI ideas from https://codepen.io/anthkris/pen/WGGAQz and here https://codepen.io/imtoobose/pen/KMgvBX?q=simon&order=popularity&depth=everything&show_forks=false @done(17-12-06 18:02)
 
                 Hint: Here are mp3s you can use for each button: 
                     https://s3.amazonaws.com/freecodecamp/simonSound1.mp3,
@@ -24,16 +24,18 @@ Todos:
                     https://s3.amazonaws.com/freecodecamp/simonSound3.mp3,
                     https://s3.amazonaws.com/freecodecamp/simonSound4.mp3.
 
-            ☐ Build UI (example here http://simon-game.herokuapp.com/)
-                ☐ After game finised show a message
-            ☐ Add 'Fork on github' in the corner or github share link (like here https://firestarter-96e46.firebaseapp.com/)
-            ☐ Add footer (preferably fixed bottom)
-            ☐ Correct e2e test
-            ☐ Write Unit tests
+            ✔ Build UI (example here http://simon-game.herokuapp.com/) @done(17-12-06 18:07)
+                ✔ After game finised show a message @done(17-12-06 18:02)
+            ✔ Add 'Fork on github' in the corner or github share link (like here https://firestarter-96e46.firebaseapp.com/) @done(17-12-06 18:02)
+            ✔ Add footer (preferably fixed bottom) @done(17-12-06 18:02)
+            ✔ Correct e2e test @done(17-12-06 18:13)
+            ✔ Write Unit tests @done(17-12-07 17:17)
+
+            ☐ Add spinner before Angular component loading
+                ☐ Refactor index.html, and move all elements to component, except spinner
+
             ☐ Deploy on gh-pages
             ☐ Deploy on codepen
-
-            ☐ And if it possible by time - add spinner when Angular component loading
 
     Done:
         ✔ Style for checkboxes (from here https://codepen.io/bbodine1/pen/novBm) @done(17-12-05 17:17)

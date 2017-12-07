@@ -14,13 +14,13 @@ $bdRadiusInner: 8px solid $mainColor;
     justify-content: center;
     h1 {
         font-family: 'Alfa Slab One', cursive;
-        margin-top: 10px;
-        margin-bottom: 0px;
+        margin-top: 7px;
+        margin-bottom: 3px;
     }
     .board-container {
         color: $mainColor;
-        width: 350px;
-        height: 350px;
+        width: 400px;
+        height: 400px;
         position: relative;
         display: flex;
         justify-content: center;
@@ -37,7 +37,7 @@ $bdRadiusInner: 8px solid $mainColor;
             border-radius: 50%;
             position: absolute;
             align-self: center;
-            padding: 3px;
+            padding: 7px;
             .display {
                 font-family: 'Aldrich', sans-serif;
                 border: 3px solid $mainColor;
@@ -72,7 +72,7 @@ $bdRadiusInner: 8px solid $mainColor;
 }
 
 .tile {
-    width: 165px;
+    width: 192px;
     &.left-up {
         background-color: #00a368;
         border-bottom: $bdSide;

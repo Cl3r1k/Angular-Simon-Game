@@ -5,41 +5,41 @@
 Todos:
     New:
         Current:
-            ✔ Write business logic (look here https://codepen.io/Em-Ant/full/QbRyqq/) @done(17-12-06 17:00)
-                ✔ I am presented with a random series of button presses. @done(17-12-04 16:10)
-                ✔ Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step. @done(17-12-04 16:10)
-                ✔ I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button. @done(17-12-06 17:00)
-                ✔ If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again. @done(17-12-04 16:10)
-                ✔ I can see how many steps are in the current series of button presses. @done(17-12-04 16:11)
-                ✔ If I want to restart, I can hit a button to do so, and the game will return to a single step. @done(17-12-04 16:11)
-                ✔ I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses. @done(17-12-04 16:13)
-                ✔ I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over. @done(17-12-04 16:13)
-
-                ✔ When user failed inform about this (like here https://codepen.io/imtoobose/pen/KMgvBX?q=simon&limit=all&type=type-pens) @done(17-12-06 17:01)
-                ✔ Some UI ideas from https://codepen.io/anthkris/pen/WGGAQz and here https://codepen.io/imtoobose/pen/KMgvBX?q=simon&order=popularity&depth=everything&show_forks=false @done(17-12-06 18:02)
-
-                Hint: Here are mp3s you can use for each button: 
-                    https://s3.amazonaws.com/freecodecamp/simonSound1.mp3,
-                    https://s3.amazonaws.com/freecodecamp/simonSound2.mp3,
-                    https://s3.amazonaws.com/freecodecamp/simonSound3.mp3,
-                    https://s3.amazonaws.com/freecodecamp/simonSound4.mp3.
-
-            ✔ Build UI (example here http://simon-game.herokuapp.com/) @done(17-12-06 18:07)
-                ✔ After game finised show a message @done(17-12-06 18:02)
-            ✔ Add 'Fork on github' in the corner or github share link (like here https://firestarter-96e46.firebaseapp.com/) @done(17-12-06 18:02)
-            ✔ Add footer (preferably fixed bottom) @done(17-12-06 18:02)
-            ✔ Correct e2e test @done(17-12-06 18:13)
-            ✔ Write Unit tests @done(17-12-07 17:17)
-
-            ✔ Add spinner before Angular component loading @done(17-12-07 19:08)
-                ✔ Refactor index.html, and move all elements to component, except spinner @done(17-12-07 19:08)
-                ✔ Replace spinner (with https://ihatetomatoes.net/create-custom-preloading-screen/) @done(17-12-11 17:14)
-
-            ✔ Deploy on gh-pages @done(17-12-11 17:22)
-            ☐ Deploy on codepen
-
+            
     Done:
         ✔ Style for checkboxes (from here https://codepen.io/bbodine1/pen/novBm) @done(17-12-05 17:17)
+        ✔ Write business logic (look here https://codepen.io/Em-Ant/full/QbRyqq/) @done(17-12-06 17:00)
+            ✔ I am presented with a random series of button presses. @done(17-12-04 16:10)
+            ✔ Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step. @done(17-12-04 16:10)
+            ✔ I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button. @done(17-12-06 17:00)
+            ✔ If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again. @done(17-12-04 16:10)
+            ✔ I can see how many steps are in the current series of button presses. @done(17-12-04 16:11)
+            ✔ If I want to restart, I can hit a button to do so, and the game will return to a single step. @done(17-12-04 16:11)
+            ✔ I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses. @done(17-12-04 16:13)
+            ✔ I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over. @done(17-12-04 16:13)
+        
+        ✔ Some UI ideas from https://codepen.io/anthkris/pen/WGGAQz and here https://codepen.io/imtoobose/pen/KMgvBX?q=simon&order=popularity&depth=everything&show_forks=false @done(17-12-06 18:02)
+
+        Hint: Here are mp3s you can use for each button: 
+            https://s3.amazonaws.com/freecodecamp/simonSound1.mp3,
+            https://s3.amazonaws.com/freecodecamp/simonSound2.mp3,
+            https://s3.amazonaws.com/freecodecamp/simonSound3.mp3,
+            https://s3.amazonaws.com/freecodecamp/simonSound4.mp3.
+
+        ✔ Build UI (example here http://simon-game.herokuapp.com/) @done(17-12-06 18:07)
+            ✔ After game finised show a message @done(17-12-06 18:02)
+        ✔ Add 'Fork on github' in the corner or github share link (like here https://firestarter-96e46.firebaseapp.com/) @done(17-12-06 18:02)
+        ✔ Add footer (preferably fixed bottom) @done(17-12-06 18:02)
+        ✔ Correct e2e test @done(17-12-06 18:13)
+        ✔ Write Unit tests @done(17-12-07 17:17)
+
+        ✔ Add spinner before Angular component loading @done(17-12-07 19:08)
+            ✔ Refactor index.html, and move all elements to component, except spinner @done(17-12-07 19:08)
+            ✔ Replace spinner (with https://ihatetomatoes.net/create-custom-preloading-screen/) @done(17-12-11 17:14)
+
+        ✔ Deploy on gh-pages @done(17-12-11 17:22)
+        ✔ Deploy on codepen (https://codepen.io/Cl3r1k/pen/BJBwVo) @done(17-12-11 17:41)
 
     Canceled:
+        ✘ When user failed inform about this (like here https://codepen.io/imtoobose/pen/KMgvBX?q=simon&limit=all&type=type-pens) -> replaced with another animation @cancelled(17-12-11 17:49)
         

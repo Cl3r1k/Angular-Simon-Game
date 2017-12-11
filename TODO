@@ -33,7 +33,7 @@ Todos:
 
             ✔ Add spinner before Angular component loading @done(17-12-07 19:08)
                 ✔ Refactor index.html, and move all elements to component, except spinner @done(17-12-07 19:08)
-                ☐ Replace spinner (with https://ihatetomatoes.net/create-custom-preloading-screen/)
+                ✔ Replace spinner (with https://ihatetomatoes.net/create-custom-preloading-screen/) @done(17-12-11 17:14)
 
             ☐ Deploy on gh-pages
             ☐ Deploy on codepen

@@ -33,9 +33,9 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
-        const el = document.getElementById('nb-global-spinner');
+        const el = document.getElementById('loader-wrapper');
         if (el) {
-            el.style['display'] = 'none';
+            el.classList.add('loaded');
         }
     }
 

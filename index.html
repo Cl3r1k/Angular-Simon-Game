@@ -1,1 +1,134 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Angular Simon Game</title><base href="https://Cl3r1k.github.io/Angular-Simon-Game/"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="styles.70d807940c725af7d58c.bundle.css" rel="stylesheet"/></head><body><div id="nb-global-spinner" class="spinner"><div class="blob blob-0"></div><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div><div class="blob blob-4"></div><div class="blob blob-5"></div></div><app-root></app-root><script type="text/javascript" src="inline.6eca787ee3d6611a2205.bundle.js"></script><script type="text/javascript" src="polyfills.ad37cd45a71cb38eee76.bundle.js"></script><script type="text/javascript" src="main.db7bf391fa72f40a225a.bundle.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Angular Simon Game</title><base href="https://Cl3r1k.github.io/Angular-Simon-Game/"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="styles.1b6ce3c221dc15af5d7e.bundle.css" rel="stylesheet"/></head><body><style>#loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+        
+        #loader {
+            display: block;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #3498db;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+            z-index: 1001;
+        }
+        
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #e74c3c;
+            -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+        }
+        
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #f9c922;
+            -webkit-animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite;
+        }
+        
+        #loader-wrapper .loader-section {
+            position: fixed;
+            top: 0;
+            width: 51%;
+            height: 100%;
+            background: #222222;
+            z-index: 1000;
+            -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+            transform: translateX(0);
+        }
+        
+        #loader-wrapper .loader-section.section-left {
+            left: 0;
+        }
+        
+        #loader-wrapper .loader-section.section-right {
+            right: 0;
+        }
+        /* Animations */
+        
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        /* end Animations */
+        /* Loaded */
+        
+        #loader-wrapper.loaded .loader-section.section-left {
+            -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+        }
+        
+        #loader-wrapper.loaded .loader-section.section-right {
+            -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            transform: translateX(100%);
+        }
+        
+        #loader-wrapper.loaded .loader-section.section-left,
+        #loader-wrapper.loaded .loader-section.section-right {
+            -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        }
+        
+        .loaded #loader {
+            opacity: 0;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+        
+        #loader-wrapper.loaded {
+            visibility: hidden;
+            -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+            -webkit-transition: all 0.3s 1s ease-out;
+            transition: all 0.3s 1s ease-out;
+        }</style><div id="loader-wrapper"><div id="loader"></div><div class="loader-section section-left"></div><div class="loader-section section-right"></div></div><app-root></app-root><script type="text/javascript" src="inline.f81f7e83629fc83ed12a.bundle.js"></script><script type="text/javascript" src="polyfills.ad37cd45a71cb38eee76.bundle.js"></script><script type="text/javascript" src="main.45e6df7effb1f5641ef9.bundle.js"></script></body></html>

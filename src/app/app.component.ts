@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
         this.state = 0;
         this.stepsArr = [];
         this.counter = 0;
-        this.mode = 0;    // TODO: Do not forget to change it back to 0
+        this.mode = 0;
         this.userSteps = 0;
         this.passed = 0;
         this.nextAttempt = false;
